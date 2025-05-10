@@ -1,0 +1,185 @@
+{
+  "User Registration with Email": {
+    "tests": [
+      {
+        "summary": "User Registration with Email",
+        "test_cases": [
+          {
+            "id": "TC-001",
+            "title": "Valid registration with correct email and password",
+            "preconditions": "User is on the registration page",
+            "steps": [
+              "Enter a valid email",
+              "Enter a valid password",
+              "Click on the Register button"
+            ],
+            "expected_result": "User should be successfully registered and logged in",
+            "type": "Positive"
+          },
+          {
+            "id": "TC-002",
+            "title": "Invalid registration with incorrect email format",
+            "preconditions": "User is on the registration page",
+            "steps": [
+              "Enter an invalid email format",
+              "Enter a valid password",
+              "Click on the Register button"
+            ],
+            "expected_result": "User should not be registered and an error message should be displayed for invalid email format",
+            "type": "Negative"
+          },
+          {
+            "id": "TC-003",
+            "title": "Invalid registration with password less than 6 characters",
+            "preconditions": "User is on the registration page",
+            "steps": [
+              "Enter a valid email",
+              "Enter a password with less than 6 characters",
+              "Click on the Register button"
+            ],
+            "expected_result": "User should not be registered and an error message should be displayed for password length",
+            "type": "Negative"
+          },
+          {
+            "id": "TC-004",
+            "title": "Edge case: Registration with maximum password length",
+            "preconditions": "User is on the registration page",
+            "steps": [
+              "Enter a valid email",
+              "Enter a password with maximum allowed characters",
+              "Click on the Register button"
+            ],
+            "expected_result": "User should be successfully registered and logged in with the maximum length password",
+            "type": "Edge"
+          }
+        ]
+      }
+    ]
+  },
+  "User Login with Mobile": {
+    "tests": [
+      {
+        "summary": "User Login with Mobile",
+        "test_cases": [
+          {
+            "id": "TC-001",
+            "title": "Valid login with correct credentials",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "Enter a valid mobile number",
+              "Enter a valid OTP",
+              "Click on the login button"
+            ],
+            "expected_result": "User should be successfully logged into their account",
+            "type": "Positive"
+          },
+          {
+            "id": "TC-002",
+            "title": "Invalid login with incorrect mobile number",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "Enter an invalid mobile number",
+              "Enter a valid OTP",
+              "Click on the login button"
+            ],
+            "expected_result": "User should not be able to log in and should see an error message",
+            "type": "Negative"
+          },
+          {
+            "id": "TC-003",
+            "title": "Invalid login with incorrect OTP",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "Enter a valid mobile number",
+              "Enter an incorrect OTP",
+              "Click on the login button"
+            ],
+            "expected_result": "User should not be able to log in and should see an error message",
+            "type": "Negative"
+          },
+          {
+            "id": "TC-004",
+            "title": "Edge case: Login with maximum length mobile number",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "Enter a mobile number with the maximum allowed length",
+              "Enter a valid OTP",
+              "Click on the login button"
+            ],
+            "expected_result": "User should be successfully logged into their account",
+            "type": "Edge"
+          }
+        ]
+      }
+    ]
+  },
+  "Social Media Sign-in Options": {
+    "tests": [
+      {
+        "summary": "Social Media Sign-in Options",
+        "test_cases": [
+          {
+            "id": "TC-001",
+            "title": "Valid login with Google sign-in",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "1. Choose Google sign-in option",
+              "2. Enter valid Google account credentials",
+              "3. Click on login button"
+            ],
+            "expected_result": "User should be logged in successfully using Google account",
+            "type": "Positive"
+          },
+          {
+            "id": "TC-002",
+            "title": "Valid login with Apple sign-in",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "1. Choose Apple sign-in option",
+              "2. Enter valid Apple account credentials",
+              "3. Click on login button"
+            ],
+            "expected_result": "User should be logged in successfully using Apple account",
+            "type": "Positive"
+          },
+          {
+            "id": "TC-003",
+            "title": "Invalid login with Google sign-in",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "1. Choose Google sign-in option",
+              "2. Enter invalid Google account credentials",
+              "3. Click on login button"
+            ],
+            "expected_result": "User should not be logged in and should see an error message",
+            "type": "Negative"
+          },
+          {
+            "id": "TC-004",
+            "title": "Invalid login with Apple sign-in",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "1. Choose Apple sign-in option",
+              "2. Enter invalid Apple account credentials",
+              "3. Click on login button"
+            ],
+            "expected_result": "User should not be logged in and should see an error message",
+            "type": "Negative"
+          },
+          {
+            "id": "TC-005",
+            "title": "Edge case: No selection of sign-in option",
+            "preconditions": "User is on the login page",
+            "steps": [
+              "1. Do not choose any sign-in option",
+              "2. Enter valid credentials for any account",
+              "3. Click on login button"
+            ],
+            "expected_result": "User should not be able to log in and should see a prompt to select a sign-in option",
+            "type": "Edge"
+          }
+        ]
+      }
+    ]
+  }
+}
