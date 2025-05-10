@@ -1,0 +1,27 @@
+{
+  "epic_summary": "User Registration & Login Feature",
+  "epic_description": "Implement user registration and login functionality with email, mobile, Google/Apple sign-in options.",
+  "stories": [
+    {
+      "summary": "User Registration with Email",
+      "description": "Allow users to register using their email address and set up a password for account access.",
+      "acceptance_criteria": "Given the user is on the registration page, When they enter a valid email and password, Then they should be successfully registered and logged in.",
+      "priority": "High",
+      "story_points": 5
+    },
+    {
+      "summary": "User Login with Mobile",
+      "description": "Enable users to log in using their mobile number and receive an OTP for verification.",
+      "acceptance_criteria": "Given the user is on the login page, When they enter a valid mobile number and OTP, Then they should be successfully logged into their account.",
+      "priority": "High",
+      "story_points": 5
+    },
+    {
+      "summary": "Social Media Sign-in Options",
+      "description": "Integrate Google and Apple sign-in options for users to log in quickly and securely.",
+      "acceptance_criteria": "Given the user is on the login page, When they choose Google/Apple sign-in, Then they should be able to log in using their respective accounts.",
+      "priority": "Medium",
+      "story_points": 3
+    }
+  ]
+}
